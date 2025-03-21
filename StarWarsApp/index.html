@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/css/styles.css">
+</head>
+<body>
+
+    <audio id="starWarsTheme" loop>
+        <source src="Assets/audio/star-wars-theme.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Navigation Top Bar -->
+    <nav>
+        <ul>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#planets">Planets</a></li>
+            <li><a href="#films">Movies</a></li>
+            
+        </ul>
+    </nav>
+     <!-- Separator Line -->
+     <div class="separator"></div>
+
+    <!-- Background Picture -->
+    <header class="banner"></header>
+     <!-- Separator Line -->
+     <div class="separator"></div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about=content">
+            <p>
+                This is a Star Wars themed application designed to help users manage various elements from the Star Wars universe, such as characters, planets, and movies. The app allows you to explore detailed information and interact with a variety of Star Wars content.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Separator Line -->
+    <div class="separator"></div>   
+
+    <!-- Character Section -->
+    <div class="container" id="characters">
+        <h1>Characters</h1>
+        
+        <!-- Search Input -->
+        <input type="text" id="search" placeholder="Search for a character..." oninput="searchCharacters()">
+        
+        <!-- Character List -->
+        <ul id="character-list"></ul>
+
+        <!-- Pagination Controls -->
+        <div id="pagination"></div>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="separator"></div> 
+
+    <!-- Planets Section -->
+    <div id="planets" class="container">
+        <h1>Planets</h1>
+        
+        <!-- Climate Filter Dropdown -->
+        <select id="climate-filter" onchange="filterPlanets()">
+            <option value="">Select Climate</option>
+            <option value="temperate">Temperate</option>
+            <option value="arid">Arid</option>
+            <option value="tropical">Tropical</option>
+            <!-- Add more options based on available climates -->
+        </select>
+
+        <!-- Planet List -->
+        <ul id="planet-list"></ul>
+
+        <!-- Pagination Controls -->
+        <div id="planet-pagination"></div>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="separator"></div>
+
+    <!-- Films Section -->
+    <div id="films" class="container">
+    <h1>Films</h1>
+
+    <!-- Film List -->
+    <ul id="film-list"></ul>
+    </div>
+
+    <!-- Modal for Opening Crawl -->
+    <div id="film-modal" class="film-modal">
+        <div class="film-modal-content">
+            <span id="close-modal" class="close-modal">X</span>
+            <h2 id="modal-film-title"></h2>
+            <!-- Star Wars Crawl Effect -->
+            <div class="crawl-container">
+            <div class="crawl">
+                <p id="modal-opening-crawl"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Separator Line -->
+    <div class="separator"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>May The Force Be With You <br><a href="https://www.youtube.com/watch?v=U9t-slLl30E" target="_blank">Please Press here</a></p>
+    </footer>
+
+
+    
+
+    
+
+   
+    <script src="Assets/javascript/script.js"></script>
+
+    
+</body>
+</html>

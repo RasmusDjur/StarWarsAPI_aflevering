@@ -1,0 +1,256 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Font Import */
+@font-face {
+    font-family: 'DeathStar';
+    src: url('../fonts/DeathStar.otf') format('opentype');
+}
+
+/* General Styles */
+body {
+    color: yellow;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'DeathStar', sans-serif;
+}
+
+/* Navigation */
+nav {
+    padding: 40px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* h1 */
+h1 {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+
+/* Banner */
+.banner {
+    background: url('../img/StarWarsBackground.jpg') center/cover;
+    width: 90%;
+    aspect-ratio: 16/9;
+}
+
+/* Sections */
+.about, .container, #films {
+    padding: 40px 20px;
+    width: 90%;
+}
+
+/* Separator */
+.separator {
+    width: 90%;
+    height: 2px;
+    background-color: yellow;  
+}
+
+/* Character & Planet List */
+#character-list, #planet-list, #film-list {
+    list-style: none;
+    padding: 0;
+}
+
+.character-item, .planet-item, .film-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid yellow;
+    color: yellow;
+    font-size: 1.1rem;
+}
+
+.film-item:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Search Input */
+#search, #climate-filter {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: yellow;
+    border: 2px solid yellow;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Pagination */
+#pagination, #planet-pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button, #planet-pagination button {
+    background-color: black;
+    color: yellow;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid yellow;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#pagination button:hover, #planet-pagination button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Modal */
+.film-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.film-modal-content {
+    background-color: black;
+    margin: 5% auto;
+    padding: 40px;
+    border: 2px solid yellow;
+    width: 80%;
+    max-width: 900px;
+    color: yellow;
+    font-family: 'DeathStar', sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 20px yellow;
+}
+
+#modal-film-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+#close-modal {
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+#close-modal:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+/* Footer */
+footer {
+    font-size: 18px;
+    padding: 40px 20px;
+}
+
+footer p a {
+    color: yellow;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: red;
+}
+
+/* Crawl Effect */
+.crawl-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crawl {
+    position: absolute;
+    width: 80%;
+    max-width: 600px;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%) rotateX(20deg);
+    font-size: 1rem;
+    line-height: 2;
+    text-align: justify;
+    animation: crawlAnimation 30s linear forwards;
+    color: yellow;
+    font-weight: bold;
+}
+
+@keyframes crawlAnimation {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1, nav ul li a, footer {
+        font-size: 26px;
+    }
+
+    .about {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1, nav ul li a, footer {
+        font-size: 32px;
+    }
+
+    .about {
+        font-size: 23px;
+
+    }
+}
+
+
+
+
+
+
+
